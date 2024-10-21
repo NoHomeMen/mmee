@@ -1,0 +1,50 @@
+{{ define "main" }}
+<div class="bgimg">
+    <video autoplay muted loop poster="poster.jpg">
+        {{ if .Site.Params.background }}
+            <source src="{{ .Site.Params.background }}" type="video/mp4">
+        {{ else }}
+            <source src="bg.mp4" type="video/mp4">
+        {{ end }}
+    </video>
+    
+    <div class="container">
+        <!-- Logo Section -->
+        <div class="logo-section">
+            <a href="https://www.youtube.com/watch?v=7wF7hoVguVU" target="_blank" rel="noopener noreferrer">
+            <img src="logo.png" alt="Merlin Element Logo" class="logo">
+        </a>
+        </div>
+
+        <!-- MERLIN ELEMENT text below the logo -->
+        <div class="merlin-section">
+            <h1>SNOVI KOJI<br>POSTAJU STVARNOST.</h1>
+        </div>
+        
+        <!-- Separate section for Legalize -->
+        <div class="legalize-section">
+            <p id="demo"></p>
+            <p>Hrvatska je spremna!</p>
+        </div>
+        
+        <!-- Social Icons -->
+        <section class="social-icons">
+            <ul class="social-icons-list">
+                <li class="social-icon instagram">
+                    <a href="https://www.instagram.com/merlinelement/" aria-label="Instagram social media link"></a>
+                </li>
+                <li class="social-icon email">
+                    <a href="mailto:info@merlinelement.com" aria-label="Email social media link"></a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</div>
+
+<!-- Footer Section -->
+<div class="footer">
+    <p class="footer-content">© 2024 Merlin Element. Sva prava pridržana.</p>
+</div>
+
+<script src="{{ "/js/script.js" | relURL }}"></script>
+{{ end }}

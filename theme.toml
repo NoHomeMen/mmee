@@ -1,0 +1,16 @@
+name = ""
+description = ""
+
+license = ""
+licenselink = ""
+
+homepage = ""
+demosite = ""
+
+tags = ["minimal", "simple", "contact"]
+
+authors = [
+  {name = "Merlin Element", homepage = "https://merlinelement.com"},
+]
+
+min_version = "0.111.3"
