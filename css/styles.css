@@ -1,0 +1,227 @@
+/* Global reset */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Full-screen background image with video */
+.bgimg {
+  height: 100vh; /* Full-screen height */
+  background-position: center;
+  background-size: cover;
+  position: relative; /* To position text and other elements */
+  color: white;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 25px;
+}
+
+.bgimg video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Prevent stretching */
+  position: absolute;
+  display: block;
+}
+
+/* Antonio font for the center section */
+@font-face {
+  font-family: 'Antonio';
+  src: url('/fonts/Antonio-Bold.otf') format('opentype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* TTNorms font for demo text */
+@font-face {
+  font-family: 'TTNorms';
+  src: url('/fonts/TTNorms-Medium.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* Logo Section */
+.logo-section {
+  margin-bottom: -50px; /* Space between the logo and MERLIN ELEMENT */
+  text-align: center; /* Center the logo */
+}
+
+.logo {
+  max-width: 100%; /* Ensure the logo doesn't exceed its container's width */
+  height: auto; /* Maintain the aspect ratio */
+  max-height: 500px; /* Start with a larger height */
+  margin: 0 auto; /* Center horizontally */
+}
+
+.container {
+  position: absolute;
+  top: 45%; /* Moves the container slightly up */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  max-width: 600px;
+  width: 100%;
+}
+
+/* MERLIN ELEMENT section */
+.merlin-section {
+  margin-bottom: 20px; /* Space between sections */
+  font-family: 'Antonio', sans-serif;
+  color: #c2fbff; /* Light blue color */
+  font-size: 30px; /* Adjust as needed */
+  letter-spacing: -1px; /* Negative letter spacing */
+}
+
+/* Legalize section */
+.legalize-section {
+  margin-bottom: 20px;
+  font-family: 'TTNorms', sans-serif;
+  color: #c2fbff;
+  font-size: 18px; /* Made slightly smaller */
+}
+
+/* Social icons styling */
+.social-icons-list .social-icon {
+  width: 30px; /* Set a consistent size for the icons */
+  height: 30px;
+  display: inline-block; /* Ensure the icons stack inline */
+  background-size: contain; /* Ensure the image fits */
+  background-repeat: no-repeat; /* Prevent repetition */
+}
+
+.instagram {
+  background-image: url('/svg/icons/instagram.svg');
+}
+
+.email {
+  background-image: url('/svg/icons/email.svg');
+}
+
+.social-icon a {
+  display: block; /* Make the entire area clickable */
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}
+
+.social-icon:hover.instagram {
+  background-image: url('/svg/icons/instagram-hover.svg'); /* Replace with your hover image */
+}
+
+.social-icon:hover.email {
+  background-image: url('/svg/icons/email-hover.svg'); /* Replace with your hover image */
+}
+
+/* Footer styling */
+.footer {
+  font-family: 'TTNorms', sans-serif;
+  background-color: transparent; /* Make background transparent */
+  color: #c2fbff; /* Light blue color */
+  text-align: center; /* Center the text */
+  padding: 20px;
+  position: absolute; /* Position at the bottom */
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%); /* Center horizontally */
+  width: 100%; /* Full width */
+  box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .container {
+    top: 45%; /* Keep content centered vertically */
+  }
+
+  .merlin-section {
+    white-space: normal; /* Allow wrapping on smaller screens */
+    font-size: 28px; /* Slightly smaller text */
+  }
+
+  .legalize-section {
+    font-size: 20px; /* Made smaller for medium screens */
+  }
+
+  .logo {
+    max-height: 450px; /* Adjusted height for medium screens */
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    top: 45%; /* Keep content centered */
+  }
+
+  .merlin-section {
+    white-space: normal; /* Allow wrapping on smaller screens */
+    font-size: 26px; /* Smaller text */
+  }
+
+  .legalize-section {
+    font-size: 20px; /* Adjusted size for tablets */
+  }
+
+  .social-icons-list .social-icon {
+    width: 30px; /* Keep icons the same size */
+    height: 30px;
+  }
+
+  .logo {
+    max-height: 450px; /* Adjusted height for tablets */
+  }
+  .logo-section {
+    margin-bottom: -20px; /* Increase negative margin to move the logo up */
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    top: 45%; /* Keep content centered */
+  }
+
+  .merlin-section {
+    white-space: normal; /* Allow wrapping on smaller screens */
+    font-size: 24px; /* Smaller text */
+  }
+
+  .legalize-section {
+    font-size: 20px; /* Slightly larger text for smaller screens */
+  }
+
+  .social-icons-list .social-icon {
+    width: 30px; /* Keep icons the same size */
+    height: 30px;
+  }
+
+  .logo {
+    max-height: 450px; /* Adjusted height for smaller screens */
+  }
+  .logo-section {
+    margin-bottom: -20px; /* Increase negative margin to move the logo up */
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    top: 45%; /* Keep content centered */
+    padding: 0 10px; /* Add padding for smaller screens */
+  }
+
+  .merlin-section {
+    white-space: normal; /* Allow wrapping on smaller screens */
+    font-size: 22px; /* Smaller text */
+  }
+
+  .legalize-section {
+    font-size: 20px; /* Slightly larger size for mobile */
+  }
+
+  .footer {
+    padding: 15px; /* Smaller footer padding */
+  }
+
+  .logo {
+    max-height: 450px; /* Even smaller height for mobile */
+  }
+  .logo-section {
+    margin-bottom: -20px; /* Increase negative margin to move the logo up */
+  }
+}

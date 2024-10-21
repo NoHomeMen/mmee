@@ -1,0 +1,1 @@
+// Get the release date from the data attribute
